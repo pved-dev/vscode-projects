@@ -1,0 +1,50 @@
+[
+  {
+    "prompt_inputs": {
+      "height": "178 cm",
+      "weight": "68 lbs",
+      "goal": "Prepare for a marathon with a 20-mile long run training session scheduled for 10 AM",
+      "restrictions": "Gluten-free"
+    },
+    "solution_criteria": [
+      "Meal plan is compact and covers one full day",
+      "Includes high carbohydrate intake appropriate for endurance training",
+      "Pre-workout meal timed before the 10 AM long run with easily digestible carbs",
+      "Post-workout recovery meal includes carbohydrates and protein within 2 hours of training completion"
+    ],
+    "task_description": "Write a compact, conscice 1 day meal plan for a single athlete",
+    "scenario": "Testing with a high-intensity endurance athlete (marathon runner) requiring high carbohydrate intake and timing around long training sessions"
+  },
+  {
+    "prompt_inputs": {
+      "height": "178",
+      "weight": "154",
+      "goal": "Maintain energy and muscle recovery for competitive soccer match in evening",
+      "restrictions": "Vegan (no animal products)"
+    },
+    "solution_criteria": [
+      "Meal plan covers full day with 3+ meals/snacks",
+      "All foods are plant-based with adequate protein sources (legumes, tofu, nuts, seeds)",
+      "Provides sustained energy for athletic performance without animal products",
+      "Plan is concise and practical to prepare"
+    ],
+    "task_description": "Write a compact, conscice 1 day meal plan for a single athlete",
+    "scenario": "Testing with a sport-specific dietary constraint (vegan soccer player) requiring plant-based protein sources while maintaining athletic performance nutrition"
+  },
+  {
+    "prompt_inputs": {
+      "height": "180 cm",
+      "weight": "200 lbs",
+      "goal": "Build muscle mass with caloric surplus for strength training",
+      "restrictions": "None"
+    },
+    "solution_criteria": [
+      "Meal plan covers all meals for one day (breakfast, lunch, dinner, snacks)",
+      "Each meal includes high protein content (minimum 25g per meal) suitable for muscle building",
+      "Total daily calories support a surplus for a 200 lb weightlifter (approximately 2800-3200 calories)",
+      "Plan is compact and concise (no more than 400 words)"
+    ],
+    "task_description": "Write a compact, conscice 1 day meal plan for a single athlete",
+    "scenario": "Testing with a strength/power athlete (weightlifter) needing protein-focused meals with specific caloric surplus for muscle building"
+  }
+]
