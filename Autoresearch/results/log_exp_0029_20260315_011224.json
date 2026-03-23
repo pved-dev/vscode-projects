@@ -1,0 +1,40 @@
+{
+  "run_id": "exp_0029_20260315_011224",
+  "hypothesis": "CATEGORY_SPECIFIC_MODELS: Train separate LightGBM models for each of the 3 main product categories (HOBBIES, HOUSEHOLD, FOODS) instead of a single model. Different product categories have distinct sales patterns, seasonality, and price sensitivity. Category-specific models should capture these unique patterns better than a one-size-fits-all approach, potentially improving forecasting accuracy for each category.",
+  "wrmsse": 0.0,
+  "duration_sec": 287.7,
+  "timestamp": "2026-03-15T01:17:47",
+  "n_features": 36,
+  "n_train_rows": 853720,
+  "lgb_params": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.1,
+    "metric": "rmse",
+    "num_leaves": 255,
+    "learning_rate": 0.05,
+    "feature_fraction": 0.8,
+    "bagging_fraction": 0.8,
+    "bagging_freq": 1,
+    "min_child_samples": 50,
+    "lambda_l2": 0.1,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  },
+  "global_cap": 744.0,
+  "n_item_clipped": 28074,
+  "n_global_clipped": 0,
+  "lag_features": [
+    3,
+    7,
+    10,
+    14,
+    21,
+    28,
+    35,
+    42,
+    49,
+    56
+  ],
+  "categories": [
+    

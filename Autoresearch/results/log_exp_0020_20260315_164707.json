@@ -1,0 +1,47 @@
+{
+  "run_id": "exp_0020_20260315_164707",
+  "hypothesis": "Add item_id x store_id x wday smoothed target encoding using a two-step approach: first compute item-store mean (as in exp_0014 best=0.97640), then add wday deviation from that item-store mean. This captures weekday patterns per product-store without the sparse data problem of a full 3-way interaction. The wday deviation is computed as the smoothed mean difference between sales on a given weekday vs the item-store overall mean, giving the model a clean weekday adjustment signal.",
+  "wrmsse": 0.0,
+  "duration_sec": 143.5,
+  "timestamp": "2026-03-15T16:50:50",
+  "n_features": 98,
+  "n_train_rows": 792644,
+  "lgb_params": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.5,
+    "metric": "rmse",
+    "boosting_type": "gbdt",
+    "num_leaves": 64,
+    "learning_rate": 0.05,
+    "feature_fraction": 0.6,
+    "bagging_fraction": 0.7,
+    "bagging_freq": 1,
+    "min_child_samples": 50,
+    "min_gain_to_split": 0.0,
+    "lambda_l2": 0.1,
+    "lambda_l1": 0.0,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  },
+  "lag_features": [
+    1,
+    2,
+    3,
+    7,
+    14,
+    21,
+    28,
+    35,
+    42,
+    49,
+    56
+  ],
+  "rolling_windows": [
+    7,
+    14,
+    28,
+    56
+  ],
+  "best_iteration": 430
+}

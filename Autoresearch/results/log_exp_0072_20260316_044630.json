@@ -1,0 +1,71 @@
+{
+  "run_id": "exp_0072_20260316_044630",
+  "hypothesis": "Refine LGB+XGB blend from exp_0069 (WRMSSE=0.94290). Try blend weights 0.6 LGB + 0.4 XGB (same as best exp_0069). But tune LightGBM: num_leaves=288, learning_rate=0.038, lambda_l2=7.0, min_child_samples=220, feature_fraction=0.65, bagging_fraction=0.75, tweedie_power=1.5. XGBoost: same params as exp_0069. Goal: find slightly better LGB config to improve blend.",
+  "wrmsse": 0.0,
+  "duration_sec": 263.3,
+  "timestamp": "2026-03-16T04:52:20",
+  "n_features": 106,
+  "n_train_rows": 792644,
+  "lgb_params_A": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.5,
+    "metric": "rmse",
+    "boosting_type": "gbdt",
+    "num_leaves": 288,
+    "max_depth": 7,
+    "learning_rate": 0.038,
+    "feature_fraction": 0.65,
+    "bagging_fraction": 0.75,
+    "bagging_freq": 1,
+    "min_child_samples": 220,
+    "min_gain_to_split": 0.05,
+    "lambda_l2": 7.0,
+    "lambda_l1": 1.0,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  },
+  "xgb_params_B": {
+    "objective": "reg:tweedie",
+    "tweedie_variance_power": 1.5,
+    "eval_metric": "rmse",
+    "tree_method": "hist",
+    "max_depth": 7,
+    "eta": 0.04,
+    "subsample": 0.7,
+    "colsample_bytree": 0.6,
+    "min_child_weight": 250,
+    "lambda": 8.0,
+    "alpha": 1.0,
+    "nthread": -1,
+    "seed": 42
+  },
+  "lag_features": [
+    1,
+    2,
+    3,
+    7,
+    14,
+    21,
+    28,
+    35,
+    42,
+    49,
+    56,
+    84,
+    168,
+    365
+  ],
+  "rolling_windows": [
+    7,
+    14,
+    28,
+    56
+  ],
+  "model_A_best_iteration": 407,
+  "model_B_best_iteration": 364,
+  "blend_weights": {
+    "lgb": 0.6,
+    "xgb": 0.4
+  }
+}

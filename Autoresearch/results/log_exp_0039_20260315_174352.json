@@ -1,0 +1,48 @@
+{
+  "run_id": "exp_0039_20260315_174352",
+  "hypothesis": "The best model so far uses tweedie_variance_power=1.5 (WRMSSE=0.94488, exp_0033). Hypothesis: add item_id \u00d7 store_id interaction encoded as target encoding has been exhausted. Instead, try adding new interaction features: (1) snap \u00d7 lag_7 (snap day with same-weekday lag), (2) snap \u00d7 rmean_7 (snap demand context), (3) event_flag \u00d7 lag_7 (event with recent history), (4) dow \u00d7 item_enc (day-of-week modulated by item baseline), (5) price_norm_28 \u00d7 rmean_28 (price discount signal scaled by demand). These multiplicative interactions capture non-linear relationships that tree splits alone may miss. All other settings match best run (exp_0033).",
+  "wrmsse": 0.0,
+  "duration_sec": 125.3,
+  "timestamp": "2026-03-15T17:47:13",
+  "n_features": 103,
+  "n_train_rows": 792644,
+  "lgb_params": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.5,
+    "metric": "rmse",
+    "boosting_type": "gbdt",
+    "num_leaves": 256,
+    "max_depth": -1,
+    "learning_rate": 0.05,
+    "feature_fraction": 0.6,
+    "bagging_fraction": 0.7,
+    "bagging_freq": 1,
+    "min_child_samples": 50,
+    "min_gain_to_split": 0.0,
+    "lambda_l2": 0.1,
+    "lambda_l1": 0.0,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  },
+  "lag_features": [
+    1,
+    2,
+    3,
+    7,
+    14,
+    21,
+    28,
+    35,
+    42,
+    49,
+    56
+  ],
+  "rolling_windows": [
+    7,
+    14,
+    28,
+    56
+  ],
+  "best_iteration": 133
+}

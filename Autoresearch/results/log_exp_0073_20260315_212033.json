@@ -1,0 +1,51 @@
+{
+  "run_id": "exp_0073_20260315_212033",
+  "hypothesis": "Tune Tweedie variance power to 1.2 and num_leaves to 255 with learning_rate=0.03. Previous Tweedie 1.2 tests held num_leaves at 256 \u2014 trying 255 with reduced lr for potentially better generalization. Based on next priority suggestions.",
+  "wrmsse": 0.0,
+  "duration_sec": 271.6,
+  "timestamp": "2026-03-15T21:26:16",
+  "n_features": 105,
+  "n_train_rows": 792644,
+  "lgb_params": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.2,
+    "metric": "rmse",
+    "boosting_type": "gbdt",
+    "num_leaves": 255,
+    "max_depth": 8,
+    "learning_rate": 0.03,
+    "feature_fraction": 0.6,
+    "bagging_fraction": 0.7,
+    "bagging_freq": 1,
+    "min_child_samples": 50,
+    "min_gain_to_split": 0.0,
+    "lambda_l2": 0.1,
+    "lambda_l1": 0.0,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  },
+  "lag_features": [
+    1,
+    2,
+    3,
+    7,
+    14,
+    21,
+    28,
+    35,
+    42,
+    49,
+    56,
+    84,
+    168,
+    365
+  ],
+  "rolling_windows": [
+    7,
+    14,
+    28,
+    56
+  ],
+  "best_iteration": 181
+}

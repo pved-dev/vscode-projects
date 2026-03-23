@@ -1,0 +1,71 @@
+{
+  "run_id": "exp_0079_20260316_052357",
+  "hypothesis": "Refine LGB+XGB blend from exp_0069 (WRMSSE=0.94290). Try LightGBM with num_leaves=192, learning_rate=0.035, lambda_l2=6.0, min_child_samples=200, tweedie_power=1.5, feature_fraction=0.65, bagging_fraction=0.75. XGBoost: max_depth=6, eta=0.035, min_child_weight=200, lambda=6.0, colsample_bytree=0.65, subsample=0.75. Blend: 0.6 LGB + 0.4 XGB. Hypothesis: slightly lighter trees with more regularization may generalize better.",
+  "wrmsse": 0.0,
+  "duration_sec": 266.6,
+  "timestamp": "2026-03-16T05:29:52",
+  "n_features": 106,
+  "n_train_rows": 792644,
+  "lgb_params_A": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.5,
+    "metric": "rmse",
+    "boosting_type": "gbdt",
+    "num_leaves": 192,
+    "max_depth": 7,
+    "learning_rate": 0.035,
+    "feature_fraction": 0.65,
+    "bagging_fraction": 0.75,
+    "bagging_freq": 1,
+    "min_child_samples": 200,
+    "min_gain_to_split": 0.05,
+    "lambda_l2": 6.0,
+    "lambda_l1": 1.0,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  },
+  "xgb_params_B": {
+    "objective": "reg:tweedie",
+    "tweedie_variance_power": 1.5,
+    "eval_metric": "rmse",
+    "tree_method": "hist",
+    "max_depth": 6,
+    "eta": 0.035,
+    "subsample": 0.75,
+    "colsample_bytree": 0.65,
+    "min_child_weight": 200,
+    "lambda": 6.0,
+    "alpha": 1.0,
+    "nthread": -1,
+    "seed": 42
+  },
+  "lag_features": [
+    1,
+    2,
+    3,
+    7,
+    14,
+    21,
+    28,
+    35,
+    42,
+    49,
+    56,
+    84,
+    168,
+    365
+  ],
+  "rolling_windows": [
+    7,
+    14,
+    28,
+    56
+  ],
+  "model_A_best_iteration": 403,
+  "model_B_best_iteration": 383,
+  "blend_weights": {
+    "lgb": 0.6,
+    "xgb": 0.4
+  }
+}

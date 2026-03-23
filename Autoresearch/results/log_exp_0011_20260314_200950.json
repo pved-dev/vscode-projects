@@ -1,0 +1,26 @@
+{
+  "run_id": "exp_0011_20260314_200950",
+  "hypothesis": "RECURSIVE_FORECASTING_V2: Implement recursive multi-step forecasting where predictions for each day use the previous day's prediction as a lag feature, enabling the model to capture temporal dependencies across the 28-day horizon.",
+  "wrmsse": 0.953706,
+  "duration_sec": 76.3,
+  "timestamp": "2026-03-14T20:11:38",
+  "n_features": 31,
+  "n_train_rows": 1707273,
+  "params": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.1,
+    "metric": "rmse",
+    "num_leaves": 127,
+    "learning_rate": 0.05,
+    "feature_fraction": 0.8,
+    "bagging_fraction": 0.8,
+    "bagging_freq": 1,
+    "min_child_samples": 20,
+    "lambda_l2": 0.1,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  },
+  "forecasting_method": "recursive",
+  "horizon_days": 28
+}

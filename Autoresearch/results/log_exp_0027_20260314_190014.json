@@ -1,0 +1,43 @@
+{
+  "run_id": "exp_0027_20260314_190014",
+  "hypothesis": "XGBOOST_LIGHTGBM_BLEND: Create a blended ensemble of LightGBM and XGBoost models to leverage complementary strengths and improve forecasting accuracy.",
+  "wrmsse": 0.972261,
+  "duration_sec": 80.9,
+  "timestamp": "2026-03-14T19:02:04",
+  "n_features": 33,
+  "n_train_rows": 1706975,
+  "lgb_params": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.1,
+    "metric": "rmse",
+    "num_leaves": 127,
+    "learning_rate": 0.05,
+    "feature_fraction": 0.8,
+    "bagging_fraction": 0.8,
+    "bagging_freq": 1,
+    "min_child_samples": 20,
+    "lambda_l2": 0.1,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  },
+  "xgb_params": {
+    "objective": "reg:tweedie",
+    "tweedie_variance_power": 1.1,
+    "eval_metric": "rmse",
+    "max_depth": 6,
+    "learning_rate": 0.05,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 10,
+    "reg_alpha": 0.1,
+    "reg_lambda": 0.1,
+    "verbosity": 0,
+    "n_jobs": -1,
+    "seed": 42
+  },
+  "ensemble_weights": {
+    "lgb": 0.6,
+    "xgb": 0.4
+  }
+}

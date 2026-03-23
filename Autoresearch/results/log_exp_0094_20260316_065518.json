@@ -1,0 +1,71 @@
+{
+  "run_id": "exp_0094_20260316_065518",
+  "hypothesis": "Try lambda_l1=0.3 for LightGBM (between 0.0 and 0.5, which gave best so far at 0.94333). Keep lambda_l2=8.0, num_leaves=256, lr=0.04, min_child_samples=250, tweedie_power=1.5. Best so far: exp_0093 with lambda_l1=0.5 gave WRMSSE=0.94333. Testing if slightly less L1 regularization at 0.3 further improves score. Keep blend at 0.55 LGB + 0.45 XGB from best recent experiments.",
+  "wrmsse": 0.0,
+  "duration_sec": 272.7,
+  "timestamp": "2026-03-16T07:01:19",
+  "n_features": 106,
+  "n_train_rows": 792644,
+  "lgb_params_A": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.5,
+    "metric": "rmse",
+    "boosting_type": "gbdt",
+    "num_leaves": 256,
+    "max_depth": 7,
+    "learning_rate": 0.04,
+    "feature_fraction": 0.6,
+    "bagging_fraction": 0.7,
+    "bagging_freq": 1,
+    "min_child_samples": 250,
+    "min_gain_to_split": 0.05,
+    "lambda_l2": 8.0,
+    "lambda_l1": 0.3,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  },
+  "xgb_params_B": {
+    "objective": "reg:tweedie",
+    "tweedie_variance_power": 1.5,
+    "eval_metric": "rmse",
+    "tree_method": "hist",
+    "max_depth": 7,
+    "eta": 0.04,
+    "subsample": 0.7,
+    "colsample_bytree": 0.6,
+    "min_child_weight": 250,
+    "lambda": 8.0,
+    "alpha": 0.3,
+    "nthread": -1,
+    "seed": 42
+  },
+  "lag_features": [
+    1,
+    2,
+    3,
+    7,
+    14,
+    21,
+    28,
+    35,
+    42,
+    49,
+    56,
+    84,
+    168,
+    365
+  ],
+  "rolling_windows": [
+    7,
+    14,
+    28,
+    56
+  ],
+  "model_A_best_iteration": 348,
+  "model_B_best_iteration": 445,
+  "blend_weights": {
+    "lgb": 0.55,
+    "xgb": 0.45
+  }
+}

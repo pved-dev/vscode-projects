@@ -1,0 +1,47 @@
+{
+  "run_id": "exp_0032_20260315_172334",
+  "hypothesis": "The best model so far uses num_leaves=256 (WRMSSE=0.94669). Now testing whether increasing n_estimators to 1200 with a lower learning_rate=0.03 can further improve by allowing more boosting rounds to refine predictions. Keep num_leaves=256, min_child_samples=50, lambda_l2=0.1 unchanged. Use early_stopping_rounds=50 to prevent overfitting. The hypothesis is that the current model may be underfitting due to too few trees.",
+  "wrmsse": 0.0,
+  "duration_sec": 144.8,
+  "timestamp": "2026-03-15T17:26:57",
+  "n_features": 95,
+  "n_train_rows": 792644,
+  "lgb_params": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.5,
+    "metric": "rmse",
+    "boosting_type": "gbdt",
+    "num_leaves": 256,
+    "learning_rate": 0.03,
+    "feature_fraction": 0.6,
+    "bagging_fraction": 0.7,
+    "bagging_freq": 1,
+    "min_child_samples": 50,
+    "min_gain_to_split": 0.0,
+    "lambda_l2": 0.1,
+    "lambda_l1": 0.0,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  },
+  "lag_features": [
+    1,
+    2,
+    3,
+    7,
+    14,
+    21,
+    28,
+    35,
+    42,
+    49,
+    56
+  ],
+  "rolling_windows": [
+    7,
+    14,
+    28,
+    56
+  ],
+  "best_iteration": 347
+}

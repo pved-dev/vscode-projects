@@ -1,0 +1,24 @@
+{
+  "run_id": "exp_0009_20260314_180451",
+  "hypothesis": "ZERO_DOWNSAMPLE: Downsample zero-sale training rows by 70% to balance the dataset and help model focus on non-zero sales patterns.",
+  "wrmsse": 1.024241,
+  "duration_sec": 80.7,
+  "timestamp": "2026-03-14T18:06:37",
+  "n_features": 31,
+  "n_train_rows": 1017064,
+  "params": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.1,
+    "metric": "rmse",
+    "num_leaves": 127,
+    "learning_rate": 0.05,
+    "feature_fraction": 0.8,
+    "bagging_fraction": 0.8,
+    "bagging_freq": 1,
+    "min_child_samples": 20,
+    "lambda_l1": 0.1,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  }
+}

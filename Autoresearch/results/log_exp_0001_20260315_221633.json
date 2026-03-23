@@ -1,0 +1,51 @@
+{
+  "run_id": "exp_0001_20260315_221633",
+  "hypothesis": "Test Tweedie variance power=1.2 (down from 1.5) with same full feature set. Lower Tweedie power penalizes zeros less harshly and may better fit M5 sparse sales. All other params unchanged from baseline (num_leaves=256, lr=0.04, etc.).",
+  "wrmsse": 0.0,
+  "duration_sec": 250.9,
+  "timestamp": "2026-03-15T22:21:59",
+  "n_features": 106,
+  "n_train_rows": 792644,
+  "lgb_params": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.2,
+    "metric": "rmse",
+    "boosting_type": "gbdt",
+    "num_leaves": 256,
+    "max_depth": 8,
+    "learning_rate": 0.04,
+    "feature_fraction": 0.6,
+    "bagging_fraction": 0.7,
+    "bagging_freq": 1,
+    "min_child_samples": 100,
+    "min_gain_to_split": 0.0,
+    "lambda_l2": 1.0,
+    "lambda_l1": 0.1,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  },
+  "lag_features": [
+    1,
+    2,
+    3,
+    7,
+    14,
+    21,
+    28,
+    35,
+    42,
+    49,
+    56,
+    84,
+    168,
+    365
+  ],
+  "rolling_windows": [
+    7,
+    14,
+    28,
+    56
+  ],
+  "best_iteration": 134
+}

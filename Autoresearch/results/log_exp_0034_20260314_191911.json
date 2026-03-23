@@ -1,0 +1,30 @@
+{
+  "run_id": "exp_0034_20260314_191911",
+  "hypothesis": "TIME_BASED_CV_ENSEMBLE: Use time-based cross-validation with multiple validation windows to train an ensemble of models that capture different temporal patterns and improve generalization.",
+  "wrmsse": 0.979854,
+  "duration_sec": 87.5,
+  "timestamp": "2026-03-14T19:21:11",
+  "n_features": 32,
+  "n_models": 2,
+  "model_weights": [
+    0.47564857773097147,
+    0.5243514222690285
+  ],
+  "cv_windows": [
+    [
+      1885,
+      1858,
+      1885
+    ],
+    [
+      1857,
+      1830,
+      1857
+    ],
+    [
+      1829,
+      1802,
+      1829
+    ]
+  ]
+}

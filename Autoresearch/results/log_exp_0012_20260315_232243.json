@@ -1,0 +1,55 @@
+{
+  "run_id": "exp_0012_20260315_232243",
+  "hypothesis": "Try Tweedie variance power=1.3 combined with num_leaves=255 and learning_rate=0.035. Best so far is exp_0009 at 0.94340 with tweedie_variance_power=1.5. Tweedie 1.2 was tried in exp_0001 and was worse (0.94482). Now trying 1.3 as a middle ground with slightly adjusted tree params. Keep regularization at lambda_l2=8.0, lambda_l1=1.0, min_child_samples=250 from best exp_0009.",
+  "wrmsse": 0.0,
+  "duration_sec": 254.2,
+  "timestamp": "2026-03-15T23:28:13",
+  "n_features": 106,
+  "n_train_rows": 792644,
+  "lgb_params": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.3,
+    "metric": "rmse",
+    "boosting_type": "gbdt",
+    "num_leaves": 255,
+    "max_depth": 7,
+    "learning_rate": 0.035,
+    "feature_fraction": 0.6,
+    "bagging_fraction": 0.7,
+    "bagging_freq": 1,
+    "min_child_samples": 250,
+    "min_gain_to_split": 0.05,
+    "lambda_l2": 8.0,
+    "lambda_l1": 1.0,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  },
+  "lag_features": [
+    1,
+    2,
+    3,
+    7,
+    14,
+    21,
+    28,
+    35,
+    42,
+    49,
+    56,
+    84,
+    168,
+    365
+  ],
+  "rolling_windows": [
+    7,
+    14,
+    28,
+    56
+  ],
+  "lgb_best_iteration": 262,
+  "blend_weights": {
+    "lgb": 1.0,
+    "xgb": 0.0
+  }
+}

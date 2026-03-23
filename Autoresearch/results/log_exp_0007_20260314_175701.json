@@ -1,0 +1,25 @@
+{
+  "run_id": "exp_0007_20260314_175701",
+  "hypothesis": "DEPT_MODELS: Train separate LightGBM models for each department to capture department-specific patterns and interactions better.",
+  "wrmsse": 0.983193,
+  "duration_sec": 121.6,
+  "timestamp": "2026-03-14T17:59:30",
+  "n_features": 30,
+  "n_train_rows": 1706975,
+  "n_departments": 7,
+  "params": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.1,
+    "metric": "rmse",
+    "num_leaves": 127,
+    "learning_rate": 0.05,
+    "feature_fraction": 0.8,
+    "bagging_fraction": 0.8,
+    "bagging_freq": 1,
+    "min_child_samples": 20,
+    "lambda_l2": 0.1,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  }
+}

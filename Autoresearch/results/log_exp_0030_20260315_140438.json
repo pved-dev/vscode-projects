@@ -1,0 +1,59 @@
+{
+  "run_id": "exp_0030_20260315_140438",
+  "hypothesis": "LGB_WEEKLY_CYCLICAL_ENHANCED: Enhance weekly cyclical features by adding more sophisticated day-of-week interactions and weekly pattern stability measures. Include cyclical encoding for day-of-week with sine/cosine transforms, weekly pattern deviations, day-of-week \u00d7 price interactions, and weekly volatility measures. Add weekly momentum features that capture how sales patterns change from week to week for better short-term forecasting accuracy.",
+  "wrmsse": 0.0,
+  "duration_sec": 167.4,
+  "timestamp": "2026-03-15T14:08:30",
+  "n_features": 83,
+  "n_train_rows": 725662,
+  "lgb_params": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.1,
+    "metric": "rmse",
+    "boosting_type": "gbdt",
+    "num_leaves": 64,
+    "learning_rate": 0.02,
+    "feature_fraction": 0.6,
+    "bagging_fraction": 0.6,
+    "bagging_freq": 1,
+    "min_child_samples": 200,
+    "min_gain_to_split": 1.0,
+    "lambda_l2": 2.0,
+    "lambda_l1": 0.1,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  },
+  "lag_features": [
+    1,
+    2,
+    3,
+    7,
+    14,
+    21,
+    28,
+    35,
+    42
+  ],
+  "rolling_windows": [
+    7,
+    14,
+    28
+  ],
+  "best_iteration": 1498,
+  "weekly_cyclical_features": [
+    "wday_sin",
+    "wday_cos",
+    "biweekly_sin",
+    "biweekly_cos",
+    "weekly_pattern_stability",
+    "weekly_momentum",
+    "weekly_acceleration",
+    "weekly_volatility",
+    "weekly_consistency_14",
+    "weekly_consistency_28",
+    "weekend_sales_ratio",
+    "dow_cat_seasonal",
+    "weekly_trend_strength"
+  ]
+}

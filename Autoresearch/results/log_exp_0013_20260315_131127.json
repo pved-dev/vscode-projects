@@ -1,0 +1,44 @@
+{
+  "run_id": "exp_0013_20260315_131127",
+  "hypothesis": "LGB_PRICE_INTERACTION_FEATURES: Add sophisticated price-based interaction features to capture price elasticity effects. Include price_rank within store/category to capture competitive positioning, price_vs_avg_ratio to measure relative pricing, price_change_momentum for trend detection, and cross-category price correlations. Also add snap_price_interaction to capture promotional effects during SNAP periods. Keep proven regularization settings from previous best run.",
+  "wrmsse": 0.0,
+  "duration_sec": 117.8,
+  "timestamp": "2026-03-15T13:13:59",
+  "n_features": 56,
+  "n_train_rows": 725580,
+  "lgb_params": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.1,
+    "metric": "rmse",
+    "boosting_type": "gbdt",
+    "num_leaves": 64,
+    "learning_rate": 0.02,
+    "feature_fraction": 0.6,
+    "bagging_fraction": 0.6,
+    "bagging_freq": 1,
+    "min_child_samples": 200,
+    "min_gain_to_split": 1.0,
+    "lambda_l2": 2.0,
+    "lambda_l1": 0.1,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  },
+  "lag_features": [
+    1,
+    2,
+    3,
+    7,
+    14,
+    21,
+    28,
+    35,
+    42
+  ],
+  "rolling_windows": [
+    7,
+    14,
+    28
+  ],
+  "best_iteration": 387
+}

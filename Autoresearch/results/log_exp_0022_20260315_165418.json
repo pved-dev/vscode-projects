@@ -1,0 +1,47 @@
+{
+  "run_id": "exp_0022_20260315_165418",
+  "hypothesis": "Based on exp_0014 (best=0.97640) which added item_id x store_id smoothed target encoding, try adding item_id x dept_id x wday smoothed target encoding to capture day-of-week sales patterns at the department level. Also add store_id x wday encoding to capture store-level day-of-week patterns. Using smoothing factor 50 and training data only to avoid leakage. All other settings from exp_0012 (best=0.94640).",
+  "wrmsse": 0.0,
+  "duration_sec": 137.4,
+  "timestamp": "2026-03-15T16:57:56",
+  "n_features": 99,
+  "n_train_rows": 792644,
+  "lgb_params": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.5,
+    "metric": "rmse",
+    "boosting_type": "gbdt",
+    "num_leaves": 64,
+    "learning_rate": 0.05,
+    "feature_fraction": 0.6,
+    "bagging_fraction": 0.7,
+    "bagging_freq": 1,
+    "min_child_samples": 50,
+    "min_gain_to_split": 0.0,
+    "lambda_l2": 0.1,
+    "lambda_l1": 0.0,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  },
+  "lag_features": [
+    1,
+    2,
+    3,
+    7,
+    14,
+    21,
+    28,
+    35,
+    42,
+    49,
+    56
+  ],
+  "rolling_windows": [
+    7,
+    14,
+    28,
+    56
+  ],
+  "best_iteration": 314
+}

@@ -1,0 +1,27 @@
+{
+  "run_id": "exp_0020_20260314_183453",
+  "hypothesis": "REGULARIZED_LGBM_PARAMS: Increase regularization strength (lambda_l1/l2) and adjust tree complexity (num_leaves, min_child_samples) to reduce overfitting and improve generalization on validation data.",
+  "wrmsse": 0.972263,
+  "duration_sec": 87.6,
+  "timestamp": "2026-03-14T18:36:55",
+  "n_features": 48,
+  "n_train_rows": 1706975,
+  "params": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.1,
+    "metric": "rmse",
+    "num_leaves": 63,
+    "learning_rate": 0.05,
+    "feature_fraction": 0.8,
+    "bagging_fraction": 0.8,
+    "bagging_freq": 1,
+    "min_child_samples": 50,
+    "lambda_l1": 1.0,
+    "lambda_l2": 5.0,
+    "min_gain_to_split": 0.1,
+    "max_depth": 8,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  }
+}

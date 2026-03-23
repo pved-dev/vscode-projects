@@ -1,0 +1,71 @@
+{
+  "run_id": "exp_0091_20260316_063700",
+  "hypothesis": "Try stronger regularization: lambda_l2=10.0, lambda_l1=1.5, min_child_samples=300, min_gain_to_split=0.1 for LightGBM. Also try lambda=10.0, alpha=1.5, min_child_weight=300 for XGBoost. Blend 0.6 LGB + 0.4 XGB. Best so far is exp_0090 (WRMSSE=0.94294) with similar settings \u2014 trying to push further with matched XGB regularization.",
+  "wrmsse": 0.0,
+  "duration_sec": 280.8,
+  "timestamp": "2026-03-16T06:43:12",
+  "n_features": 106,
+  "n_train_rows": 792644,
+  "lgb_params_A": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.5,
+    "metric": "rmse",
+    "boosting_type": "gbdt",
+    "num_leaves": 256,
+    "max_depth": 7,
+    "learning_rate": 0.04,
+    "feature_fraction": 0.6,
+    "bagging_fraction": 0.7,
+    "bagging_freq": 1,
+    "min_child_samples": 300,
+    "min_gain_to_split": 0.1,
+    "lambda_l2": 10.0,
+    "lambda_l1": 1.5,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  },
+  "xgb_params_B": {
+    "objective": "reg:tweedie",
+    "tweedie_variance_power": 1.5,
+    "eval_metric": "rmse",
+    "tree_method": "hist",
+    "max_depth": 7,
+    "eta": 0.04,
+    "subsample": 0.7,
+    "colsample_bytree": 0.6,
+    "min_child_weight": 300,
+    "lambda": 10.0,
+    "alpha": 1.5,
+    "nthread": -1,
+    "seed": 42
+  },
+  "lag_features": [
+    1,
+    2,
+    3,
+    7,
+    14,
+    21,
+    28,
+    35,
+    42,
+    49,
+    56,
+    84,
+    168,
+    365
+  ],
+  "rolling_windows": [
+    7,
+    14,
+    28,
+    56
+  ],
+  "model_A_best_iteration": 347,
+  "model_B_best_iteration": 387,
+  "blend_weights": {
+    "lgb": 0.6,
+    "xgb": 0.4
+  }
+}

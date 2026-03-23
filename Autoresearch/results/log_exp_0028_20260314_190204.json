@@ -1,0 +1,24 @@
+{
+  "run_id": "exp_0028_20260314_190204",
+  "hypothesis": "ADVANCED_ROLLING_STATS: Add rolling quantiles, coefficient of variation, and trend features to capture more sophisticated temporal patterns.",
+  "wrmsse": 0.976594,
+  "duration_sec": 284.6,
+  "timestamp": "2026-03-14T19:07:21",
+  "n_features": 43,
+  "n_train_rows": 1213614,
+  "params": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.1,
+    "metric": "rmse",
+    "num_leaves": 127,
+    "learning_rate": 0.05,
+    "feature_fraction": 0.8,
+    "bagging_fraction": 0.8,
+    "bagging_freq": 1,
+    "min_child_samples": 20,
+    "lambda_l2": 0.1,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  }
+}

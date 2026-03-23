@@ -1,0 +1,71 @@
+{
+  "run_id": "exp_0030_20260314_190918",
+  "hypothesis": "MULTI_MODEL_ENSEMBLE: Train multiple diverse LightGBM models with different parameters and feature subsets, then ensemble with weighted average based on validation performance to improve robustness and reduce overfitting.",
+  "wrmsse": 0.9751,
+  "duration_sec": 137.9,
+  "timestamp": "2026-03-14T19:12:12",
+  "n_models": 4,
+  "n_train_rows": 1493962,
+  "model_configs": {
+    "model1_lag": {
+      "objective": "tweedie",
+      "tweedie_variance_power": 1.1,
+      "metric": "rmse",
+      "num_leaves": 63,
+      "learning_rate": 0.08,
+      "feature_fraction": 0.9,
+      "bagging_fraction": 0.9,
+      "bagging_freq": 1,
+      "min_child_samples": 20,
+      "lambda_l2": 0.05,
+      "verbosity": -1,
+      "n_jobs": -1,
+      "seed": 42
+    },
+    "model2_roll": {
+      "objective": "tweedie",
+      "tweedie_variance_power": 1.1,
+      "metric": "rmse",
+      "num_leaves": 127,
+      "learning_rate": 0.05,
+      "feature_fraction": 0.8,
+      "bagging_fraction": 0.8,
+      "bagging_freq": 1,
+      "min_child_samples": 30,
+      "lambda_l2": 0.1,
+      "verbosity": -1,
+      "n_jobs": -1,
+      "seed": 123
+    },
+    "model3_ewm": {
+      "objective": "tweedie",
+      "tweedie_variance_power": 1.1,
+      "metric": "rmse",
+      "num_leaves": 95,
+      "learning_rate": 0.06,
+      "feature_fraction": 0.85,
+      "bagging_fraction": 0.85,
+      "bagging_freq": 1,
+      "min_child_samples": 25,
+      "lambda_l2": 0.08,
+      "verbosity": -1,
+      "n_jobs": -1,
+      "seed": 456
+    },
+    "model4_mixed": {
+      "objective": "tweedie",
+      "tweedie_variance_power": 1.1,
+      "metric": "rmse",
+      "num_leaves": 85,
+      "learning_rate": 0.07,
+      "feature_fraction": 0.75,
+      "bagging_fraction": 0.75,
+      "bagging_freq": 1,
+      "min_child_samples": 35,
+      "lambda_l2": 0.12,
+      "verbosity": -1,
+      "n_jobs": -1,
+      "seed": 789
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "run_id": "exp_0022_20260314_230843",
+  "hypothesis": "ZERO_DOWNSAMPLING_V2: Downsample zero-sale rows more aggressively (keep only 20% of zeros) during training to reduce dataset size and improve training speed while maintaining model performance. Focus training on non-zero sales patterns while still preserving some zero-sale information for demand intermittency modeling.",
+  "wrmsse": 0.0,
+  "duration_sec": 105.1,
+  "timestamp": "2026-03-14T23:10:54",
+  "n_features": 30,
+  "n_train_rows": 918689,
+  "zero_downsample_ratio": 0.2,
+  "original_train_size": 1707273,
+  "sampled_train_size": 918689,
+  "lgb_params": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.1,
+    "metric": "rmse",
+    "num_leaves": 255,
+    "learning_rate": 0.05,
+    "feature_fraction": 0.8,
+    "bagging_fraction": 0.8,
+    "bagging_freq": 1,
+    "min_child_samples": 50,
+    "lambda_l2": 0.1,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  }
+}

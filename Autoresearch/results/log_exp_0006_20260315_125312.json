@@ -1,0 +1,40 @@
+{
+  "run_id": "exp_0006_20260315_125312",
+  "hypothesis": "XGB_FINAL_TUNED: Switch to XGBoost with M5-optimized hyperparameters. Use tree_method=hist for efficiency, max_depth=7 for optimal complexity, learning_rate=0.05 with n_estimators=1200 for proper convergence, subsample=0.85 and colsample_bytree=0.85 for balanced regularization, min_child_weight=5 for robustness, and reg_alpha=0.05 for sparse feature selection. This should leverage XGBoost's superior handling of the comprehensive feature set while preventing overfitting.",
+  "wrmsse": 0.0,
+  "duration_sec": 106.5,
+  "timestamp": "2026-03-15T12:55:23",
+  "n_features": 48,
+  "n_train_rows": 853720,
+  "xgb_params": {
+    "objective": "reg:squarederror",
+    "tree_method": "hist",
+    "max_depth": 7,
+    "learning_rate": 0.05,
+    "n_estimators": 1200,
+    "subsample": 0.85,
+    "colsample_bytree": 0.85,
+    "min_child_weight": 5,
+    "reg_alpha": 0.05,
+    "reg_lambda": 0.1,
+    "random_state": 42,
+    "n_jobs": -1,
+    "verbosity": 1
+  },
+  "lag_features": [
+    1,
+    2,
+    3,
+    7,
+    14,
+    21,
+    28,
+    35,
+    42
+  ],
+  "rolling_windows": [
+    7,
+    14,
+    28
+  ]
+}

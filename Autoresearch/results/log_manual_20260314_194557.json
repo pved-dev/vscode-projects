@@ -1,0 +1,6 @@
+{
+  "run_id": "manual_20260314_194557",
+  "hypothesis": "BASELINE: Lag features [7, 28], rolling mean windows [7, 28], LightGBM with default parameters.",
+  "duration_sec": 48.1,
+  "timestamp": "2026-03-14T19:46:47"
+}

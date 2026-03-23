@@ -1,0 +1,29 @@
+{
+  "run_id": "exp_0009_20260314_204523",
+  "hypothesis": "TIME_CROSS_VALIDATION: Implement time-based cross-validation with multiple validation windows to improve model robustness. Instead of training on all data before validation period, use multiple overlapping time windows to better simulate real forecasting conditions and reduce overfitting.",
+  "wrmsse": 0.0,
+  "duration_sec": 172.3,
+  "timestamp": "2026-03-14T20:48:43",
+  "n_features": 30,
+  "n_models": 2,
+  "fold_scores": [
+    2.110070609287261,
+    1.994761345755502
+  ],
+  "avg_fold_rmse": 2.0524159775213815,
+  "params": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.1,
+    "metric": "rmse",
+    "num_leaves": 255,
+    "learning_rate": 0.05,
+    "feature_fraction": 0.8,
+    "bagging_fraction": 0.8,
+    "bagging_freq": 1,
+    "min_child_samples": 50,
+    "lambda_l2": 0.1,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  }
+}

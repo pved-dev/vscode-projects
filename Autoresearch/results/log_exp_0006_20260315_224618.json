@@ -1,0 +1,72 @@
+{
+  "run_id": "exp_0006_20260315_224618",
+  "hypothesis": "Blend LightGBM and XGBoost predictions with optimized weights (75/25 LGB/XGB) based on experiment log showing 70/30 was best so far (0.94384 vs 0.94380 equal). Additionally tune LightGBM with tweedie_variance_power=1.3 (between 1.1 and 1.5 to find sweet spot) and XGBoost with tweedie_variance_power=1.3 as well. Same full feature set as baseline. Hypothesis: better calibrated blend weights and variance power will reduce WRMSSE below 0.94380.",
+  "wrmsse": 0.0,
+  "duration_sec": 278.2,
+  "timestamp": "2026-03-15T22:52:29",
+  "n_features": 106,
+  "n_train_rows": 792644,
+  "lgb_params": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.3,
+    "metric": "rmse",
+    "boosting_type": "gbdt",
+    "num_leaves": 256,
+    "max_depth": 8,
+    "learning_rate": 0.04,
+    "feature_fraction": 0.6,
+    "bagging_fraction": 0.7,
+    "bagging_freq": 1,
+    "min_child_samples": 100,
+    "min_gain_to_split": 0.0,
+    "lambda_l2": 1.0,
+    "lambda_l1": 0.1,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  },
+  "xgb_params": {
+    "objective": "reg:tweedie",
+    "tweedie_variance_power": 1.3,
+    "eval_metric": "rmse",
+    "tree_method": "hist",
+    "max_depth": 8,
+    "learning_rate": 0.04,
+    "colsample_bytree": 0.6,
+    "subsample": 0.7,
+    "min_child_weight": 100,
+    "reg_lambda": 1.0,
+    "reg_alpha": 0.1,
+    "n_jobs": -1,
+    "seed": 42,
+    "verbosity": 0
+  },
+  "lag_features": [
+    1,
+    2,
+    3,
+    7,
+    14,
+    21,
+    28,
+    35,
+    42,
+    49,
+    56,
+    84,
+    168,
+    365
+  ],
+  "rolling_windows": [
+    7,
+    14,
+    28,
+    56
+  ],
+  "lgb_best_iteration": 174,
+  "xgb_best_iteration": 145,
+  "blend_weights": {
+    "lgb": 0.75,
+    "xgb": 0.25
+  }
+}

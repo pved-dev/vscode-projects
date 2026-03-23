@@ -1,0 +1,55 @@
+{
+  "run_id": "exp_0015_20260315_234011",
+  "hypothesis": "Try LightGBM with num_leaves=512, learning_rate=0.025, max_depth=9, lambda_l2=8.0, lambda_l1=1.0, min_child_samples=250, min_gain_to_split=0.05. Best so far is exp_0009 at 0.94340. Deeper trees with more leaves but same regularization to capture more complex patterns. Adding a zero_sale_ratio feature: fraction of last 28 days with zero sales (vectorized).",
+  "wrmsse": 0.0,
+  "duration_sec": 292.2,
+  "timestamp": "2026-03-15T23:46:19",
+  "n_features": 108,
+  "n_train_rows": 792644,
+  "lgb_params": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.5,
+    "metric": "rmse",
+    "boosting_type": "gbdt",
+    "num_leaves": 512,
+    "max_depth": 9,
+    "learning_rate": 0.025,
+    "feature_fraction": 0.6,
+    "bagging_fraction": 0.7,
+    "bagging_freq": 1,
+    "min_child_samples": 250,
+    "min_gain_to_split": 0.05,
+    "lambda_l2": 8.0,
+    "lambda_l1": 1.0,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  },
+  "lag_features": [
+    1,
+    2,
+    3,
+    7,
+    14,
+    21,
+    28,
+    35,
+    42,
+    49,
+    56,
+    84,
+    168,
+    365
+  ],
+  "rolling_windows": [
+    7,
+    14,
+    28,
+    56
+  ],
+  "lgb_best_iteration": 405,
+  "blend_weights": {
+    "lgb": 1.0,
+    "xgb": 0.0
+  }
+}

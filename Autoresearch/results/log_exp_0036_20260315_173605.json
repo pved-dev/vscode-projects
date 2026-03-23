@@ -1,0 +1,48 @@
+{
+  "run_id": "exp_0036_20260315_173605",
+  "hypothesis": "The best model so far uses tweedie_variance_power=1.5 (WRMSSE=0.94488). Hypothesis: add day-of-year (doy) and week-of-year (woy) calendar features to capture annual seasonality more explicitly. The current model uses wday/month/year but not finer-grained annual cycle features. Adding doy and woy may help the model distinguish holiday week patterns more precisely. All other settings match exp_0033.",
+  "wrmsse": 0.0,
+  "duration_sec": 131.9,
+  "timestamp": "2026-03-15T17:39:32",
+  "n_features": 102,
+  "n_train_rows": 792644,
+  "lgb_params": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.5,
+    "metric": "rmse",
+    "boosting_type": "gbdt",
+    "num_leaves": 256,
+    "max_depth": -1,
+    "learning_rate": 0.05,
+    "feature_fraction": 0.6,
+    "bagging_fraction": 0.7,
+    "bagging_freq": 1,
+    "min_child_samples": 50,
+    "min_gain_to_split": 0.0,
+    "lambda_l2": 0.1,
+    "lambda_l1": 0.0,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  },
+  "lag_features": [
+    1,
+    2,
+    3,
+    7,
+    14,
+    21,
+    28,
+    35,
+    42,
+    49,
+    56
+  ],
+  "rolling_windows": [
+    7,
+    14,
+    28,
+    56
+  ],
+  "best_iteration": 169
+}

@@ -1,0 +1,40 @@
+{
+  "run_id": "exp_0021_20260314_230607",
+  "hypothesis": "ZERO_DOWNSAMPLING: Downsample zero-sale rows during training to reduce dataset size and improve training speed while maintaining model performance. Many retail items have frequent zero sales periods, and downsampling these can help the model focus on more informative patterns while reducing memory usage and training time.",
+  "wrmsse": 0.0,
+  "duration_sec": 128.0,
+  "timestamp": "2026-03-14T23:08:43",
+  "n_features": 30,
+  "n_train_rows": 918689,
+  "original_train_rows": 1707273,
+  "zero_sample_rate": 0.2,
+  "lgb_params": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.1,
+    "metric": "rmse",
+    "num_leaves": 255,
+    "learning_rate": 0.05,
+    "feature_fraction": 0.8,
+    "bagging_fraction": 0.8,
+    "bagging_freq": 1,
+    "min_child_samples": 50,
+    "lambda_l2": 0.1,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  },
+  "xgb_params": {
+    "objective": "reg:tweedie",
+    "tweedie_variance_power": 1.1,
+    "eval_metric": "rmse",
+    "max_depth": 8,
+    "learning_rate": 0.05,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 50,
+    "lambda": 0.1,
+    "verbosity": 0,
+    "n_jobs": -1,
+    "seed": 42
+  }
+}

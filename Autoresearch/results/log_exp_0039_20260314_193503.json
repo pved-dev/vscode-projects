@@ -1,0 +1,17 @@
+{
+  "run_id": "exp_0039_20260314_193503",
+  "hypothesis": "HIERARCHICAL_MODELING: Train separate models for different hierarchical levels (item, category, department, store) and combine predictions using weighted averaging to better capture level-specific patterns and improve overall accuracy.",
+  "wrmsse": 0.977719,
+  "duration_sec": 92.7,
+  "timestamp": "2026-03-14T19:37:25",
+  "n_features": 40,
+  "n_train_rows": 1280326,
+  "level_weights": {
+    "item": 0.6,
+    "dept": 0.2,
+    "cat": 0.2
+  },
+  "models_trained": [
+    "item"
+  ]
+}

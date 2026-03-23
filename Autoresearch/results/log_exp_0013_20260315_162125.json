@@ -1,0 +1,47 @@
+{
+  "run_id": "exp_0013_20260315_162125",
+  "hypothesis": "Add item_id \u00d7 store_id \u00d7 wday interaction target encoding (smoothed mean sales for each item-store-weekday triple). This captures the per-SKU weekly seasonality pattern directly \u2014 e.g., a specific item in a specific store might sell more on weekends vs weekdays. This is more granular than the existing item_id and store_id encodings and more direct than the DOW rolling lags, as it encodes the expected sales level for each SKU on each weekday. All other settings unchanged from exp_0012.",
+  "wrmsse": 0.0,
+  "duration_sec": 152.8,
+  "timestamp": "2026-03-15T16:25:18",
+  "n_features": 97,
+  "n_train_rows": 792644,
+  "lgb_params": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.5,
+    "metric": "rmse",
+    "boosting_type": "gbdt",
+    "num_leaves": 64,
+    "learning_rate": 0.05,
+    "feature_fraction": 0.6,
+    "bagging_fraction": 0.7,
+    "bagging_freq": 1,
+    "min_child_samples": 50,
+    "min_gain_to_split": 0.0,
+    "lambda_l2": 0.1,
+    "lambda_l1": 0.0,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  },
+  "lag_features": [
+    1,
+    2,
+    3,
+    7,
+    14,
+    21,
+    28,
+    35,
+    42,
+    49,
+    56
+  ],
+  "rolling_windows": [
+    7,
+    14,
+    28,
+    56
+  ],
+  "best_iteration": 466
+}

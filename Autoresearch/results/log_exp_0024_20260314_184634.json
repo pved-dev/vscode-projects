@@ -1,0 +1,9 @@
+{
+  "run_id": "exp_0024_20260314_184634",
+  "hypothesis": "ENSEMBLE_WEIGHTED: Create weighted ensemble of multiple models with different training windows and feature sets to improve robustness.",
+  "wrmsse": 0.975535,
+  "duration_sec": 86.2,
+  "timestamp": "2026-03-14T18:48:33",
+  "ensemble_configs": 3,
+  "total_features": 31
+}

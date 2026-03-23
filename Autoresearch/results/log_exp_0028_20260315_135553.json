@@ -1,0 +1,54 @@
+{
+  "run_id": "exp_0028_20260315_135553",
+  "hypothesis": "LGB_TEMPORAL_CONSISTENCY: Add temporal consistency features to improve forecasting stability across the prediction horizon. Include day-of-month effects, weekly seasonality strength, monthly trend components, and temporal deviation features that capture how much current sales deviate from expected seasonal patterns. Add interaction features between temporal patterns and product characteristics to model varying seasonal sensitivity across different items.",
+  "wrmsse": 0.0,
+  "duration_sec": 216.3,
+  "timestamp": "2026-03-15T14:00:27",
+  "n_features": 69,
+  "n_train_rows": 207332,
+  "lgb_params": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.1,
+    "metric": "rmse",
+    "boosting_type": "gbdt",
+    "num_leaves": 64,
+    "learning_rate": 0.02,
+    "feature_fraction": 0.6,
+    "bagging_fraction": 0.6,
+    "bagging_freq": 1,
+    "min_child_samples": 200,
+    "min_gain_to_split": 1.0,
+    "lambda_l2": 2.0,
+    "lambda_l1": 0.1,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  },
+  "lag_features": [
+    1,
+    2,
+    3,
+    7,
+    14,
+    21,
+    28,
+    35,
+    42
+  ],
+  "rolling_windows": [
+    7,
+    14,
+    28
+  ],
+  "best_iteration": 1499,
+  "temporal_features": [
+    "day_of_month_sin",
+    "day_of_month_cos",
+    "weekly_seasonality_strength",
+    "monthly_trend",
+    "temporal_deviation",
+    "seasonal_consistency_7",
+    "seasonal_consistency_28",
+    "temporal_stability"
+  ]
+}

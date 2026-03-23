@@ -1,0 +1,47 @@
+{
+  "run_id": "exp_0019_20260315_164313",
+  "hypothesis": "Add item_id x store_id smoothed target encoding (mean sales per item-store pair using training data only with smoothing factor 50). This gives the model a direct signal for baseline demand per item-store combination, which is more specific than separate item and store encodings. Building on exp_0012 (WRMSSE=0.94640).",
+  "wrmsse": 0.0,
+  "duration_sec": 160.7,
+  "timestamp": "2026-03-15T16:47:07",
+  "n_features": 97,
+  "n_train_rows": 792644,
+  "lgb_params": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.5,
+    "metric": "rmse",
+    "boosting_type": "gbdt",
+    "num_leaves": 64,
+    "learning_rate": 0.05,
+    "feature_fraction": 0.6,
+    "bagging_fraction": 0.7,
+    "bagging_freq": 1,
+    "min_child_samples": 50,
+    "min_gain_to_split": 0.0,
+    "lambda_l2": 0.1,
+    "lambda_l1": 0.0,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  },
+  "lag_features": [
+    1,
+    2,
+    3,
+    7,
+    14,
+    21,
+    28,
+    35,
+    42,
+    49,
+    56
+  ],
+  "rolling_windows": [
+    7,
+    14,
+    28,
+    56
+  ],
+  "best_iteration": 479
+}

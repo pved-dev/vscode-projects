@@ -1,0 +1,24 @@
+{
+  "run_id": "exp_0026_20260314_185827",
+  "hypothesis": "HIERARCHICAL_ENSEMBLE: Train separate models at different aggregation levels (item, dept, category, store) and combine predictions hierarchically to capture patterns at multiple scales and improve overall accuracy.",
+  "wrmsse": 2478.621863,
+  "duration_sec": 68.2,
+  "timestamp": "2026-03-14T19:00:14",
+  "n_features": 21,
+  "n_train_rows": 1707336,
+  "params": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.1,
+    "metric": "rmse",
+    "num_leaves": 127,
+    "learning_rate": 0.05,
+    "feature_fraction": 0.8,
+    "bagging_fraction": 0.8,
+    "bagging_freq": 1,
+    "min_child_samples": 20,
+    "lambda_l2": 0.1,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  }
+}

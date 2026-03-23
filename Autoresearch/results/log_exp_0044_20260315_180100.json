@@ -1,0 +1,51 @@
+{
+  "run_id": "exp_0044_20260315_180100",
+  "hypothesis": "Add very long lag features: lag_84, lag_168 (half-year), lag_365 (yearly). Top M5 solutions heavily rely on yearly seasonality. lag_365 captures same-day-last-year sales which is a strong signal for seasonal items. lag_168 captures same-weekday 24 weeks ago. All other settings match best run (exp_0033, WRMSSE=0.94488) with num_leaves=256, max_depth=8, tweedie_variance_power=1.5.",
+  "wrmsse": 0.0,
+  "duration_sec": 247.3,
+  "timestamp": "2026-03-15T18:06:21",
+  "n_features": 105,
+  "n_train_rows": 792644,
+  "lgb_params": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.5,
+    "metric": "rmse",
+    "boosting_type": "gbdt",
+    "num_leaves": 256,
+    "max_depth": 8,
+    "learning_rate": 0.04,
+    "feature_fraction": 0.6,
+    "bagging_fraction": 0.7,
+    "bagging_freq": 1,
+    "min_child_samples": 50,
+    "min_gain_to_split": 0.0,
+    "lambda_l2": 0.1,
+    "lambda_l1": 0.0,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  },
+  "lag_features": [
+    1,
+    2,
+    3,
+    7,
+    14,
+    21,
+    28,
+    35,
+    42,
+    49,
+    56,
+    84,
+    168,
+    365
+  ],
+  "rolling_windows": [
+    7,
+    14,
+    28,
+    56
+  ],
+  "best_iteration": 270
+}

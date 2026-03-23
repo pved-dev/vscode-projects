@@ -1,0 +1,58 @@
+{
+  "run_id": "exp_0032_20260316_012159",
+  "hypothesis": "Try blending two LightGBM models: one trained on all training data and one trained on recent data (last 2 years only, days >= 1550). The recent model should capture recent trends better, while the full model captures long-term patterns. Blend 60% full + 40% recent. Same feature set as best run (exp_0030 at 0.94396).",
+  "wrmsse": 0.0,
+  "duration_sec": 279.4,
+  "timestamp": "2026-03-16T01:28:02",
+  "n_features": 106,
+  "n_train_rows_full": 792644,
+  "n_train_rows_recent": 792644,
+  "lgb_params": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.5,
+    "metric": "rmse",
+    "boosting_type": "gbdt",
+    "num_leaves": 256,
+    "max_depth": 7,
+    "learning_rate": 0.04,
+    "feature_fraction": 0.6,
+    "bagging_fraction": 0.7,
+    "bagging_freq": 1,
+    "min_child_samples": 250,
+    "min_gain_to_split": 0.05,
+    "lambda_l2": 8.0,
+    "lambda_l1": 1.0,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  },
+  "lag_features": [
+    1,
+    2,
+    3,
+    7,
+    14,
+    21,
+    28,
+    35,
+    42,
+    49,
+    56,
+    84,
+    168,
+    365
+  ],
+  "rolling_windows": [
+    7,
+    14,
+    28,
+    56
+  ],
+  "lgb_best_iteration_full": 407,
+  "lgb_best_iteration_recent": 407,
+  "blend_weights": {
+    "full": 0.6,
+    "recent": 0.4
+  },
+  "recent_start_day": 1550
+}

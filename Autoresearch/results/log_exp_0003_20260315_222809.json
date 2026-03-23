@@ -1,0 +1,72 @@
+{
+  "run_id": "exp_0003_20260315_222809",
+  "hypothesis": "Blend LightGBM and XGBoost predictions (equal weight 0.5/0.5) using the same full feature set as baseline (exp_0000). LightGBM uses tweedie power=1.5, num_leaves=256, lr=0.04. XGBoost uses reg:tweedie with tweedie_variance_power=1.5, max_depth=8, lr=0.04, n_estimators=800 with early stopping. Hypothesis: blending two diverse models reduces variance and improves WRMSSE.",
+  "wrmsse": 0.0,
+  "duration_sec": 266.2,
+  "timestamp": "2026-03-15T22:33:59",
+  "n_features": 106,
+  "n_train_rows": 792644,
+  "lgb_params": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.5,
+    "metric": "rmse",
+    "boosting_type": "gbdt",
+    "num_leaves": 256,
+    "max_depth": 8,
+    "learning_rate": 0.04,
+    "feature_fraction": 0.6,
+    "bagging_fraction": 0.7,
+    "bagging_freq": 1,
+    "min_child_samples": 100,
+    "min_gain_to_split": 0.0,
+    "lambda_l2": 1.0,
+    "lambda_l1": 0.1,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  },
+  "xgb_params": {
+    "objective": "reg:tweedie",
+    "tweedie_variance_power": 1.5,
+    "eval_metric": "rmse",
+    "tree_method": "hist",
+    "max_depth": 8,
+    "learning_rate": 0.04,
+    "colsample_bytree": 0.6,
+    "subsample": 0.7,
+    "min_child_weight": 100,
+    "reg_lambda": 1.0,
+    "reg_alpha": 0.1,
+    "n_jobs": -1,
+    "seed": 42,
+    "verbosity": 0
+  },
+  "lag_features": [
+    1,
+    2,
+    3,
+    7,
+    14,
+    21,
+    28,
+    35,
+    42,
+    49,
+    56,
+    84,
+    168,
+    365
+  ],
+  "rolling_windows": [
+    7,
+    14,
+    28,
+    56
+  ],
+  "lgb_best_iteration": 187,
+  "xgb_best_iteration": 362,
+  "blend_weights": {
+    "lgb": 0.5,
+    "xgb": 0.5
+  }
+}

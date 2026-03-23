@@ -1,0 +1,35 @@
+{
+  "run_id": "exp_0001_20260315_123850",
+  "hypothesis": "EXTENDED_LAGS: Add more comprehensive lag features [1, 2, 3, 7, 14, 21, 28, 35, 42] to capture both short-term and longer-term sales patterns. The baseline only used [7, 14, 28] - adding daily lags and weekly multiples should improve forecasting accuracy by capturing more granular sales dynamics.",
+  "wrmsse": 0.0,
+  "duration_sec": 99.2,
+  "timestamp": "2026-03-15T12:40:48",
+  "n_features": 32,
+  "n_train_rows": 853720,
+  "lgb_params": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.1,
+    "metric": "rmse",
+    "num_leaves": 255,
+    "learning_rate": 0.05,
+    "feature_fraction": 0.8,
+    "bagging_fraction": 0.8,
+    "bagging_freq": 1,
+    "min_child_samples": 50,
+    "lambda_l2": 0.1,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  },
+  "lag_features": [
+    1,
+    2,
+    3,
+    7,
+    14,
+    21,
+    28,
+    35,
+    42
+  ]
+}

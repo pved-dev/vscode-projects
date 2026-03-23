@@ -1,0 +1,47 @@
+{
+  "run_id": "exp_0017_20260315_163604",
+  "hypothesis": "Add item_id \u00d7 store_id \u00d7 weekday smoothed target encoding: for each (item_id, store_id, wday) triple, compute smoothed mean sales using training data only (smoothing factor 20). This is more granular than the global item\u00d7store encoding (exp_0016) and captures day-of-week patterns per SKU-store combination. Unlike the full triple encoding in exp_0013 which hurt performance, this uses a lighter smoothing factor and pairs the encoding with the improved feature set from exp_0012 (best WRMSSE=0.94640). The wday-level encoding should capture Monday vs weekend demand shifts per product-location pair.",
+  "wrmsse": 0.0,
+  "duration_sec": 124.3,
+  "timestamp": "2026-03-15T16:39:23",
+  "n_features": 96,
+  "n_train_rows": 792644,
+  "lgb_params": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.5,
+    "metric": "rmse",
+    "boosting_type": "gbdt",
+    "num_leaves": 64,
+    "learning_rate": 0.05,
+    "feature_fraction": 0.6,
+    "bagging_fraction": 0.7,
+    "bagging_freq": 1,
+    "min_child_samples": 50,
+    "min_gain_to_split": 0.0,
+    "lambda_l2": 0.1,
+    "lambda_l1": 0.0,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  },
+  "lag_features": [
+    1,
+    2,
+    3,
+    7,
+    14,
+    21,
+    28,
+    35,
+    42,
+    49,
+    56
+  ],
+  "rolling_windows": [
+    7,
+    14,
+    28,
+    56
+  ],
+  "best_iteration": 178
+}

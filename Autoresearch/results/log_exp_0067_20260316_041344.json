@@ -1,0 +1,72 @@
+{
+  "run_id": "exp_0067_20260316_041344",
+  "hypothesis": "Refine LGB+XGB blend: try Tweedie variance power 1.3 for both LightGBM and XGBoost (currently 1.5). Tweedie 1.3 is between Poisson (1.0) and compound Poisson (1.5), which may better fit the M5 sales distribution with many zeros and moderate counts. All other hyperparameters kept same as exp_0052 best blend (LGB 0.6 + XGB 0.4).",
+  "wrmsse": 0.0,
+  "duration_sec": 250.9,
+  "timestamp": "2026-03-16T04:22:03",
+  "n_features": 106,
+  "n_train_rows": 792644,
+  "lgb_params_A": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.3,
+    "metric": "rmse",
+    "boosting_type": "gbdt",
+    "num_leaves": 256,
+    "max_depth": 7,
+    "learning_rate": 0.04,
+    "feature_fraction": 0.6,
+    "bagging_fraction": 0.7,
+    "bagging_freq": 1,
+    "min_child_samples": 250,
+    "min_gain_to_split": 0.05,
+    "lambda_l2": 8.0,
+    "lambda_l1": 1.0,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  },
+  "xgb_params_B": {
+    "objective": "reg:tweedie",
+    "tweedie_variance_power": 1.3,
+    "eval_metric": "rmse",
+    "tree_method": "hist",
+    "max_depth": 7,
+    "eta": 0.04,
+    "subsample": 0.7,
+    "colsample_bytree": 0.6,
+    "min_child_weight": 250,
+    "lambda": 8.0,
+    "alpha": 1.0,
+    "nthread": -1,
+    "seed": 42
+  },
+  "lag_features": [
+    1,
+    2,
+    3,
+    7,
+    14,
+    21,
+    28,
+    35,
+    42,
+    49,
+    56,
+    84,
+    168,
+    365
+  ],
+  "rolling_windows": [
+    7,
+    14,
+    28,
+    56
+  ],
+  "model_A_best_iteration": 267,
+  "model_B_best_iteration": 160,
+  "blend_weights": {
+    "lgb": 0.6,
+    "xgb": 0.4
+  },
+  "tweedie_variance_power": 1.3
+}

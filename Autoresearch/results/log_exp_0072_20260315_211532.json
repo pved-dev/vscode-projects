@@ -1,0 +1,51 @@
+{
+  "run_id": "exp_0072_20260315_211532",
+  "hypothesis": "Tune Tweedie variance power to 1.2 (from 1.5) AND num_leaves to 255 with learning_rate reduced to 0.03. Tweedie 1.2 is closer to Poisson which may fit M5 count data better. num_leaves=255 gives more capacity. Lower learning_rate with early stopping allows model to find better minimum. All other features match best run (exp_0070, WRMSSE=0.94499).",
+  "wrmsse": 0.0,
+  "duration_sec": 229.6,
+  "timestamp": "2026-03-15T21:20:32",
+  "n_features": 105,
+  "n_train_rows": 792644,
+  "lgb_params": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.2,
+    "metric": "rmse",
+    "boosting_type": "gbdt",
+    "num_leaves": 255,
+    "max_depth": 8,
+    "learning_rate": 0.03,
+    "feature_fraction": 0.6,
+    "bagging_fraction": 0.7,
+    "bagging_freq": 1,
+    "min_child_samples": 50,
+    "min_gain_to_split": 0.0,
+    "lambda_l2": 0.1,
+    "lambda_l1": 0.0,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  },
+  "lag_features": [
+    1,
+    2,
+    3,
+    7,
+    14,
+    21,
+    28,
+    35,
+    42,
+    49,
+    56,
+    84,
+    168,
+    365
+  ],
+  "rolling_windows": [
+    7,
+    14,
+    28,
+    56
+  ],
+  "best_iteration": 181
+}

@@ -1,0 +1,29 @@
+{
+  "run_id": "exp_0016_20260314_182444",
+  "hypothesis": "CATEGORY_ENSEMBLE: Train separate LightGBM models for each category (FOODS, HOBBIES, HOUSEHOLD) and ensemble predictions using validation-based weights.",
+  "wrmsse": 1.655599,
+  "duration_sec": 67.6,
+  "timestamp": "2026-03-14T18:26:41",
+  "n_features": 47,
+  "n_train_rows": 1706975,
+  "ensemble_weights": {
+    "FOODS": 0.3333333333333333,
+    "HOBBIES": 0.3333333333333333,
+    "HOUSEHOLD": 0.3333333333333333
+  },
+  "params": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.1,
+    "metric": "rmse",
+    "num_leaves": 127,
+    "learning_rate": 0.05,
+    "feature_fraction": 0.8,
+    "bagging_fraction": 0.8,
+    "bagging_freq": 1,
+    "min_child_samples": 20,
+    "lambda_l2": 0.1,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  }
+}

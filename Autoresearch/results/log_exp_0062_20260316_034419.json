@@ -1,0 +1,71 @@
+{
+  "run_id": "exp_0062_20260316_034419",
+  "hypothesis": "Improve LGB+XGB blend by tuning both models: LightGBM with num_leaves=320, learning_rate=0.038, lambda_l2=6.0, min_child_samples=220; XGBoost with max_depth=8, eta=0.038, min_child_weight=220, lambda=6.0; blend ratio 0.55 LGB + 0.45 XGB. Also add price_at_min_7 and price_norm_7 features for shorter-window price signals.",
+  "wrmsse": 0.0,
+  "duration_sec": 275.8,
+  "timestamp": "2026-03-16T03:50:23",
+  "n_features": 108,
+  "n_train_rows": 792644,
+  "lgb_params_A": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.5,
+    "metric": "rmse",
+    "boosting_type": "gbdt",
+    "num_leaves": 320,
+    "max_depth": 7,
+    "learning_rate": 0.038,
+    "feature_fraction": 0.6,
+    "bagging_fraction": 0.7,
+    "bagging_freq": 1,
+    "min_child_samples": 220,
+    "min_gain_to_split": 0.05,
+    "lambda_l2": 6.0,
+    "lambda_l1": 1.0,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  },
+  "xgb_params_B": {
+    "objective": "reg:tweedie",
+    "tweedie_variance_power": 1.5,
+    "eval_metric": "rmse",
+    "tree_method": "hist",
+    "max_depth": 8,
+    "eta": 0.038,
+    "subsample": 0.7,
+    "colsample_bytree": 0.6,
+    "min_child_weight": 220,
+    "lambda": 6.0,
+    "alpha": 1.0,
+    "nthread": -1,
+    "seed": 42
+  },
+  "lag_features": [
+    1,
+    2,
+    3,
+    7,
+    14,
+    21,
+    28,
+    35,
+    42,
+    49,
+    56,
+    84,
+    168,
+    365
+  ],
+  "rolling_windows": [
+    7,
+    14,
+    28,
+    56
+  ],
+  "model_A_best_iteration": 421,
+  "model_B_best_iteration": 207,
+  "blend_weights": {
+    "lgb": 0.55,
+    "xgb": 0.45
+  }
+}

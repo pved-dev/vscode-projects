@@ -1,0 +1,25 @@
+{
+  "run_id": "exp_0015_20260314_215435",
+  "hypothesis": "CLIP_OUTLIERS: Add post-processing to clip extreme predictions that are significantly larger than historical maximum sales. Very high predictions can heavily penalize WRMSSE. Clip predictions above 95th percentile of historical sales per item to reduce extreme outliers.",
+  "wrmsse": 0.0,
+  "duration_sec": 107.3,
+  "timestamp": "2026-03-14T21:56:45",
+  "n_features": 28,
+  "n_train_rows": 1707273,
+  "params": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.1,
+    "metric": "rmse",
+    "num_leaves": 255,
+    "learning_rate": 0.05,
+    "feature_fraction": 0.8,
+    "bagging_fraction": 0.8,
+    "bagging_freq": 1,
+    "min_child_samples": 50,
+    "lambda_l2": 0.5,
+    "lambda_l1": 0.05,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "run_id": "exp_0024_20260314_231419",
+  "hypothesis": "EXTREME_OUTLIER_CLIPPING: Implement more aggressive outlier clipping by capping predictions at the 98th percentile of historical sales per item, and also applying a global cap at 3x the maximum historical sales. This should reduce extreme predictions that heavily penalize WRMSSE while preserving realistic high-sales predictions.",
+  "wrmsse": 0.0,
+  "duration_sec": 1492.6,
+  "timestamp": "2026-03-14T23:39:43",
+  "n_features": 30,
+  "n_train_rows": 1707273,
+  "lgb_params": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.1,
+    "metric": "rmse",
+    "num_leaves": 255,
+    "learning_rate": 0.05,
+    "feature_fraction": 0.8,
+    "bagging_fraction": 0.8,
+    "bagging_freq": 1,
+    "min_child_samples": 50,
+    "lambda_l2": 0.1,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  },
+  "xgb_params": {
+    "objective": "reg:tweedie",
+    "tweedie_variance_power": 1.1,
+    "eval_metric": "rmse",
+    "max_depth": 8,
+    "learning_rate": 0.05,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 50,
+    "lambda": 0.1,
+    "verbosity": 0,
+    "n_jobs": -1,
+    "seed": 42
+  },
+  "global_cap": 744.0,
+  "n_item_clipped": 28028,
+  "n_global_clipped": 0
+}

@@ -1,0 +1,51 @@
+{
+  "run_id": "exp_0020_20260316_184925",
+  "hypothesis": "Poisson objective + log1p target transform: change objective to 'poisson', transform target with np.log1p(), predictions with np.expm1(). Keep best known params (lambda_l1=0.5, lambda_l2=8.0, num_leaves=256, lr=0.04). Poisson is better suited for count data (sales) than Tweedie, and log1p stabilizes variance for zero-inflated integer sales data.",
+  "wrmsse": 0.0,
+  "duration_sec": 276.0,
+  "timestamp": "2026-03-16T18:55:20",
+  "n_features": 106,
+  "n_train_rows": 792644,
+  "lgb_params": {
+    "objective": "poisson",
+    "poisson_max_delta_step": 0.7,
+    "metric": "rmse",
+    "boosting_type": "gbdt",
+    "num_leaves": 256,
+    "max_depth": 7,
+    "learning_rate": 0.04,
+    "feature_fraction": 0.6,
+    "bagging_fraction": 0.7,
+    "bagging_freq": 1,
+    "min_child_samples": 250,
+    "min_gain_to_split": 0.05,
+    "lambda_l2": 8.0,
+    "lambda_l1": 0.5,
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  },
+  "best_iteration": 273,
+  "lag_features": [
+    1,
+    2,
+    3,
+    7,
+    14,
+    21,
+    28,
+    35,
+    42,
+    49,
+    56,
+    84,
+    168,
+    365
+  ],
+  "rolling_windows": [
+    7,
+    14,
+    28,
+    56
+  ]
+}

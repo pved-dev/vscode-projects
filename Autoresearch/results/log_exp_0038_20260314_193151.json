@@ -1,0 +1,53 @@
+{
+  "run_id": "exp_0038_20260314_193151",
+  "hypothesis": "CATEGORICAL_FEATURE_OPTIMIZATION: Optimize categorical feature handling by using LightGBM's native categorical support and improved categorical encodings to better capture category-specific patterns.",
+  "wrmsse": 0.049377,
+  "duration_sec": 156.9,
+  "timestamp": "2026-03-14T19:35:03",
+  "n_features": 59,
+  "n_categorical": 12,
+  "n_train_rows": 1280326,
+  "categorical_features": [
+    "item_id",
+    "dept_id",
+    "cat_id",
+    "store_id",
+    "state_id",
+    "store_cat",
+    "store_dept",
+    "state_cat",
+    "state_dept",
+    "wday_cat",
+    "month_cat",
+    "event_state"
+  ],
+  "params": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.1,
+    "metric": "rmse",
+    "num_leaves": 127,
+    "learning_rate": 0.05,
+    "feature_fraction": 0.8,
+    "bagging_fraction": 0.8,
+    "bagging_freq": 1,
+    "min_child_samples": 20,
+    "lambda_l2": 0.1,
+    "categorical_feature": [
+      "item_id",
+      "dept_id",
+      "cat_id",
+      "store_id",
+      "state_id",
+      "store_cat",
+      "store_dept",
+      "state_cat",
+      "state_dept",
+      "wday_cat",
+      "month_cat",
+      "event_state"
+    ],
+    "verbosity": -1,
+    "n_jobs": -1,
+    "seed": 42
+  }
+}

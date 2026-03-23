@@ -1,0 +1,42 @@
+{
+  "run_id": "exp_0005_20260315_125108",
+  "hypothesis": "XGB_OPTIMIZED_HYPERPARAMS: Switch to XGBoost with optimized hyperparameters specifically tuned for M5 forecasting. Use reg:squarederror objective, lower learning rate 0.03 with more estimators, max_depth=6 for balanced complexity, gamma=2.0 for stricter splitting, and alpha=0.1 for L1 regularization to handle high-dimensional features better.",
+  "wrmsse": 0.0,
+  "duration_sec": 99.3,
+  "timestamp": "2026-03-15T12:53:12",
+  "n_features": 48,
+  "n_train_rows": 853720,
+  "xgb_params": {
+    "objective": "reg:squarederror",
+    "eval_metric": "rmse",
+    "max_depth": 6,
+    "learning_rate": 0.03,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "colsample_bylevel": 0.8,
+    "gamma": 2.0,
+    "alpha": 0.1,
+    "lambda": 1.0,
+    "min_child_weight": 10,
+    "tree_method": "hist",
+    "verbosity": 0,
+    "random_state": 42,
+    "n_jobs": -1
+  },
+  "lag_features": [
+    1,
+    2,
+    3,
+    7,
+    14,
+    21,
+    28,
+    35,
+    42
+  ],
+  "rolling_windows": [
+    7,
+    14,
+    28
+  ]
+}
