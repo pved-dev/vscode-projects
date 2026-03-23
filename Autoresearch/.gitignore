@@ -5,3 +5,8 @@ __pycache__/
 API.PY
 API.PY
 data/
+logs/
+results/
+__pycache__/
+*.parquet
+*.zip
